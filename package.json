@@ -1,0 +1,29 @@
+{
+  "name": "automacao-e2e-api-bdd",
+  "version": "1.0.0",
+  "description": "Portfolio de QA: automacao E2E com Playwright, testes de API REST e BDD com Cypress + Cucumber",
+  "author": "Yan Leal Nascimento <yanlealnasc@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test:e2e": "playwright test --config=e2e-playwright/playwright.config.ts",
+    "test:e2e:headed": "playwright test --config=e2e-playwright/playwright.config.ts --headed",
+    "report:e2e": "playwright show-report e2e-playwright/playwright-report",
+    "test:api": "playwright test --config=api-serverest/playwright.config.ts",
+    "test:bdd": "cypress run --config-file bdd-cypress/cypress.config.ts",
+    "cy:open": "cypress open --config-file bdd-cypress/cypress.config.ts",
+    "test:all": "npm run test:api && npm run test:e2e && npm run test:bdd"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "cypress": "^13.17.0",
+    "typescript": "^5.7.2",
+    "esbuild": "^0.23.1"
+  },
+  "overrides": {
+    "esbuild": "^0.23.1"
+  }
+}

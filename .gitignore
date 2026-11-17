@@ -1,0 +1,10 @@
+node_modules/
+playwright-report/
+test-results/
+blob-report/
+cypress/videos/
+cypress/screenshots/
+bdd-cypress/cypress/videos/
+bdd-cypress/cypress/screenshots/
+.env
+*.log
